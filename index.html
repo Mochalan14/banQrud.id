@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>banQrud</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Awal Header-->
+<header>
+	<a class="logo">< ban<span>Q</span>rud ></a>
+	<input type="checkbox" id="menubar">
+	<label for="menubar" class="fas fa-bars"></label>
+	<nav class="navbar">
+		<a href="#judulGatcha">Beranda</a>
+		<a href="#hasilGatcha">Hasil Gatcha</a>
+		<a href="#faqMenu">Pertanyaan</a>
+		<a href="#profilKu">About Me</a>	
+	</nav>
+</header>
+<!-- Akhir Header-->
+
+<!-- Awal Konten-->
+<main>
+	<div id="content">
+		<!-- Awal Gatcha-->
+		<article class="card">
+			<h2 id="judulGatcha" class="judul">Tebak Angka Berhadiah</h2>
+			<div class="gatcha">
+				<div class="gambarPemanis">
+					<img src="gambar/gambar1.png">
+				</div>
+				<form class="isian">
+					<div class="inputanUser">
+						<h2>Masukkan Nama</h2>
+						<input id="namaUser" placeholder="Masukkan Nama Anda" required=>
+					</div>
+					<div class="inputanUser">
+						<h2>Masukkan Jumlah Uang</h2>
+						<input id="uang" placeholder="ex: 1000,2000,dst" required>
+					</div>
+					<div class="inputanUser">
+						<h2>Masukkan Angka Tebakan (1-100)</h2>
+						<input id="angkaTebakan" placeholder="Masukkan Angka Tebakan" required>
+					</div>
+					<button id="tombolCek">Cek Hasil</button>
+				</form>
+			</div>
+		</article>
+		<!-- Akhir Gatcha-->
+
+		<!-- Awal Hasil Gatcha-->
+		<article class="hasil card">
+			<h2 id="hasilGatcha" class="judul">Hasil Tebakan</h2>
+			<div class="detail">
+				<div class="recaptHasil">
+					<table>
+						<tr>
+							<td><h2>Nama</h2></td>
+							<td><h2>:</h2></td>
+							<td><h2 id="namaKu"></h2></td>
+						</tr>
+						<tr>
+							<td><h2>Jumlah Uang Taruhan</h2></td>
+							<td><h2>:</h2></td>
+							<td><h2 id="uangKu"></h2></td>
+						</tr>
+						<tr>
+							<td><h2>Nomer Tebakan Anda</h2></td>
+							<td><h2>:</h2></td>
+							<td><h2 id="angKu"></h2></td>
+						</tr>
+						<tr>
+							<td><h2>Nomer Robot</h2></td>
+							<td><h2>:</h2></td>
+							<td><h2 id="angKom"></h2></td>
+						</tr>
+						<tr>
+							<td><h2>Status</h2></td>
+							<td><h2>:</h2></td>
+							<td><h2 id="status"></h2></td>
+						</tr>
+						<tr>
+							<td><h2>Jumlah Uang Sekarang</h2></td>
+							<td><h2>:</h2></td>
+							<td><h2 id="penDapatan"></h2></td>
+						</tr>	
+					</table>
+				</div>
+				<div class="gambarPemanis">
+					<img src="gambar/gambar2.png">
+				</div>
+			</div>
+		</article>
+		<!-- Akhir Hasil Gatcha-->
+
+		<!-- Awal FAQ-->
+		<article class="tanya card">
+			<h2 id="faqMenu" class="judul">FAQ</h2>
+			<div class="gatcha">
+				<div class="gambarPemanis">
+					<img src="gambar/gambar3.png">
+				</div>
+				<div class="listPertanyaan">
+					<div class="boxPertanyaan">
+						<div class="pertanyaan"><h3>Untuk siapa website ini dibuat ?</h3></div>
+						<div class="jawaban">
+							<q> Untuk semua orang yang ingin mencari hiburan </q>
+						</div>
+					</div>
+					<div class="boxPertanyaan">
+						<div class="pertanyaan"><h3>Apa tujuan website ini dibuat ?</h3></div>
+						<div class="jawaban">
+							<p>1. Menghibur anda semua.
+							<br>
+							2. Agar semua orang sadar bahwa trading/judi itu dapat menguras harta</p>
+						</div>
+					</div>
+					<div class="boxPertanyaan">
+						<div class="pertanyaan"><h3>Apa manfaat website ini ?</h3></div>
+						<div class="jawaban">
+							<q> Melatih kemampuan otak untuk menebak, Melatih Kemampuan Gatcha, Jika Anda Selalu Kalah Maka sebaiknya anda melakukan aktivitas yang lainnya </q>
+						</div>
+					</div>
+					<div class="boxPertanyaan">
+						<div class="pertanyaan"><h3>Kenapa Aku Selalu Kalah ?</h3></div>
+						<div class="jawaban">
+							<q> Realistis aja , anda bukan peramal. </q>
+						</div>
+					</div>
+					<div class="boxPertanyaan">
+						<div class="pertanyaan"><h3>Quotes dari pembuat website ini ?</h3></div>
+						<div class="jawaban">
+							<q> Mendung Tanpo Udan, Suwi neng kene Kowe Edan </q>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<!-- Akhir FAQ-->
+	</div>
+	<aside>
+		<!-- Awal Profil-->
+		<article id="profilKu" class="card">
+			<div class="profil">
+				<div class="gambarProfil">
+					<img src="gambar/profil.png">
+				</div>
+				<div class="infoProfil">
+					<table>
+						<tr>
+							<td>Nama</td>
+							<td>:</td>
+							<td>Mochammad Maulana</td>
+						</tr>
+						<tr>
+							<td>Umur</td>
+							<td>:</td>
+							<td>21 tahun</td>
+						</tr>
+						<tr>
+							<td>Asal</td>
+							<td>:</td>
+							<td>Rambipuji,Jember</td>
+						</tr>
+						<tr>
+							<td>Hobi</td>
+							<td>:</td>
+							<td>Mendiam</td>
+						</tr>
+						<tr>
+							<td>Cita-Cita</td>
+							<td>:</td>
+							<td>Membuatmu bahagia</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</article>
+		<!-- Akhir Profil-->
+	</aside>
+</main>
+<!-- Akhir Konten-->
+
+<!-- Awal Footer-->
+<footer>
+	<p>Belajar Dasar Pemrograman Web &#169; 2021, Dicoding Academy</p>
+</footer>
+<!-- Akhir Footer-->
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');
+
+
+*{
+	padding:0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	text-decoration: none;
+	outline: none;
+	box-sizing: border-box;
+	
+}
+
+html{
+	font-size: 62.5%;
+	
+}
+
+body{
+	background-color: white;
+}
+
+header{
+	background-color: #6B7B8E;
+	width: 100%;		
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 9%;
+	z-index: 2;
+	position: fixed;
+}
+
+header .logo{
+	font-weight: bold;
+	font-size: 3rem;
+	color: white;
+
+}
+
+header .logo span{
+	color: #ACDEAA;
+}
+
+header input{
+	display: none;
+}
+
+header label{
+	font-size: 3rem;
+	cursor: pointer;
+	color: white;
+	visibility: hidden;
+	opacity: 0;
+}
+
+header .navbar a{
+	font-size: 1.7rem;
+	color:white; 
+	margin-left: 2rem;
+}
+
+header .navbar a:hover{
+	color: #8FBBAF;
+}
+
+main{
+	padding: 20px;
+	overflow: auto;
+	position: absolute;
+	top: 10%;
+}
+
+#content{
+	width: 75%;
+	float: left;
+	
+}
+
+aside{
+	width: 25%;
+	float: right;
+	padding-left: 20px;
+
+}
+
+article{
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+
+.gatcha,.detail{
+	display: flex;
+	padding: 20px;
+}	
+
+.gambarPemanis{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+}
+
+.gambarPemanis img{
+	width: 100%;
+}
+
+
+.gatcha .isian,.detail .recaptHasil{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.judul{
+	text-align: center;
+	color: #6B7B8E;
+	padding-top: 20px;
+	font-size: 3em;
+}
+
+.inputanUser{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.inputanUser input{
+	width: 80%;
+	border-radius: 20px;
+	padding: 2% 9%;
+	font-size: 2em;
+	font-weight: bolder;
+	text-align: center;
+	border: 1px solid #6B7B8E;
+	
+}
+
+.inputanUser h2{
+	color: #6B7B8E;
+	font-weight: bold;
+	font-size: 1.7em;
+}
+
+button{
+	display: inline-block;
+	padding: 2% 6%;
+	background-color:#6B7B8E; 
+	border-radius: 20px;
+	border: 1px solid #6B7B8E;
+	cursor: pointer;
+	color: white;
+	font-size: 1.6em;
+}
+
+button:hover{
+	background-color: white;
+	color: #6B7B8E;
+}
+
+.hasil,.tanya{
+	margin-top: 20px;
+}
+
+.recaptHasil table h2{
+	font-size: 1.6em;
+	color: #6B7B8E;
+}
+
+
+.boxPertanyaan{
+	position: relative;
+	margin: 10px 20px;
+}
+
+.boxPertanyaan .pertanyaan{
+	position: relative;
+	padding: 10px;
+	background-color:#6B7B8E; 
+	color: white;
+	cursor: pointer;
+}
+
+.boxPertanyaan .pertanyaan::before{
+	content: "+";
+	position: absolute;
+	right: 20px;
+	font-size: 1.5em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.boxPertanyaan.active .pertanyaan::before{
+	content: "-";
+}
+
+.boxPertanyaan .jawaban{
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	transition: 0.5s;
+}
+
+.boxPertanyaan.active .jawaban{
+	height: auto;
+	padding: 10px;
+}
+
+.listPertanyaan{
+	font-size: 1.3em;
+}
+
+.profil{
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.profil .gambarProfil img{
+	width: 100%;
+	border-radius: 20px;
+}
+
+.infoProfil{
+	font-size: 1.6em;
+	margin-top: 20px;
+}
+
+
+footer{
+	background-color: #6B7B8E;
+	color: white;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+/* Laptop */
+@media (max-width: 1200px){
+	html{
+		font-size: 55%;
+	}
+}
+/* Tablet */
+@media (max-width: 768px){
+	header label{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header{
+		justify-content: center;
+		position: fixed;
+	}
+
+
+	header label{
+		position: absolute;
+		right: 0;
+		margin-right: 2rem;
+	}
+	header .navbar{
+		position: absolute;
+		top: 100%;
+		width: 90%;
+		background-color: #6B7B8E;
+		padding:1rem 2rem;
+		transform-origin: top;
+		transform: scaleY(0);
+		opacity: 0;
+		text-align: center;
+		margin: 10px auto;
+		border-radius: 20px;
+		transition: all 0.3s;
+		
+	}
+
+	header .navbar a{
+		display: block;
+		margin: 2rem 0;
+		font-size: 2rem;
+	}
+
+	header input:checked ~ .navbar{
+		transform: scaleY(1);
+		opacity: 1;
+	}
+
+	header input:checked ~ label::before{
+		content: '\f00d';
+	}
+
+	#content,aside{
+		width: 100%;
+	}
+
+	aside{
+		padding-left: 0px;
+	}
+
+	.gatcha{
+		flex-direction: column;
+	}
+
+	main{
+		position: absolute;
+		top: 10%;
+	}
+	.detail{
+		flex-direction: column-reverse;
+	}
+
+	.profil{
+		margin-top: 20px;
+	}
+
+}
