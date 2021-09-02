@@ -221,7 +221,7 @@ button:hover{
 	font-size: 1.3em;
 }
 
-.profil{
+.profil,.pengunjung{
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -235,6 +235,15 @@ button:hover{
 .infoProfil{
 	font-size: 1.6em;
 	margin-top: 20px;
+}
+
+.pengunjung{
+	text-align: center;
+}
+
+.pengunjung h2{
+	font-size: 1.7em;
+	margin-bottom: 10px;
 }
 
 
